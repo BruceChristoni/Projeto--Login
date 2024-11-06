@@ -1,12 +1,8 @@
 @charset "UTF-8";
 
-/*
-    Paleta de Cores
-    Verde: #49a09d
-    Lilás: #5f2c82
-*/ 
+/* VERDE_ #49a09d LILÁS: #5f2c82 */
 
-*{
+* {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0px;
     margin: 0px;
@@ -17,7 +13,6 @@ body, html {
     background-color: #5f2c82;
     height: 100vh;
     width: 100vw;
-
 }
 
 main {
@@ -26,43 +21,109 @@ main {
     width: 100vw;
 }
 
-#login {
+section#login {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: hidden;
+
     background-color: white;
     width: 250px;
     height: 500px;
     border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.447);
-    transition:  width .5s, height .5s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.442);
+
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
     transition-timing-function: ease;
 }
 
-#imagem {
-    background:  #5f2c82 url(../imagens/circle.jpg) no-repeat;
+section#login > div#imagem {
+    display: block;
+    background: #5f2c82 url(../imagens/circle.jpg) no-repeat;
     background-size: cover;
     height: 200px;
-    display: block;
+    
 }
 
-#formulario {
+section#login > div#formulario {
+    display: block;
     padding: 10px;
-    display: block;
+
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 10px;
-}
 
-p {
+div#formulario > p {
     font-size: 0.8em;
 }
 
-#info{
-    font-size: 0.9em;
+div.campo {
+    background-color: #5f2c82;
+    
+    width: 100%;
+    display: block;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
 }
 
+label {
+    display: none;
+}
+
+i {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+input {
+    background-color: #81f1ee;
+    font-size: 1em;
+    width: calc(100% - 47px);
+    height: 100%;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-2px);
+}
+
+input:focus-within {
+    background-color: white;
+}
+
+input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #49a09d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #275856;
+}
+
+a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
+    color: #275856;
+    background-color: white;
+    border: 1px solid #49a09d;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+a.botao:hover {
+    background-color: #6de9e5 ;
+}
